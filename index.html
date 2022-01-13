@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping-Pong Animation</title>
+    <style>
+        @keyframes ping-pong {
+            0% {
+                background-color: yellow;
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                background-color: red;
+                top: 400px;
+                left: 325px;
+            }
+
+            50% {
+                background-color: yellow;
+                top: 0;
+                left: 650px;
+            }
+
+            75% {
+                background-color: red;
+                top: 400px;
+                left: 975px;
+            }
+
+            100% {
+                background-color: yellow;
+                top: 0;
+                left: 1300px;
+            }
+        }
+
+        .box {
+            width: 1400px;
+            height: 500px;
+            border: 5px solid black;
+            background-color: aqua;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: relative;
+            animation: ping-pong 2s ease-in-out 0.5s infinite alternate;
+            animation-play-state: running;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animation Effect</h1>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
